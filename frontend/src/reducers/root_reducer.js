@@ -1,13 +1,14 @@
 import {combineReducers} from 'redux';
 import errorsReducer from './errors_reducer';
+import sessionApiReducer from './session_api_reducer';
 import currentUserReducer from './session_api_reducer';
-import sessionReducer from './session_reducer';
-import TweetsReducer from './tweets_reducer';
+import tweetsReducer from './tweets_reducer';
+// import sessionReducer from './session_reducer';
 
 const RootReducer = combineReducers({
-    session: sessionReducer,
+    session: sessionApiReducer,
     currentUser: currentUserReducer,
-    tweets: TweetsReducer,
+    tweets: tweetsReducer,
     errors: errorsReducer
 });
 
